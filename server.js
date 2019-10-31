@@ -20,6 +20,8 @@ const SIZE_INT8 = 1;
 let clients = [];
 let rebroadcasts = 0;
 
+const wss = new WebSocket.Server({ port: port });
+
 function getSessionDetails() {
   let filePath = path.resolve(__dirname, 'session.json');
   let asc = fs.readFileSync(filePath, 'utf8');
