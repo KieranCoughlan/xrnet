@@ -6,3 +6,7 @@
 const port = parseInt(process.env.port) || 8080;
 
 console.log("Port number: " + port);
+
+const fs = require('fs');
+
+console.log("End");
