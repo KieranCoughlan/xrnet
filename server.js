@@ -4,6 +4,7 @@
 // Create a server connector
 
 const port = parseInt(process.env.OPENSHIFT_NODEJS_PORT) || 8080;
+const host = process.env.OPENSHIFT_NODEJS_IP || 'localhost';
 
 console.log("Port number: " + port);
 
@@ -20,7 +21,7 @@ const SIZE_INT8 = 1;
 let clients = [];
 let rebroadcasts = 0;
 
-const wss = new WebSocket.Server({ port: port });
+const wss = new WebSocket.Server({ host: host,  port: port });
 
 // Create server channels
 let serverChannels = new Channels(sessionDetails.serverChannels);
