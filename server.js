@@ -3,7 +3,7 @@
 
 // Create a server connector
 
-const port = process.env.port || 8080;
+const port = parseInt(process.env.port) || 8080;
 
 const fs = require('fs');
 const WebSocket = require('ws');
