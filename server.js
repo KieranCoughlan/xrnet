@@ -3,10 +3,12 @@
 
 // Create a server connector
 
+const port = process.env.port || 8080;
+
 const fs = require('fs');
 const WebSocket = require('ws');
 const path = require('path');
-const wss = new WebSocket.Server({ port: 8080 });
+const wss = new WebSocket.Server({ port: port });
 const Channels = require('./channels');
 const Client = require('./client');
 const sessionDetails = getSessionDetails();
