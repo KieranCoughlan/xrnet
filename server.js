@@ -7,6 +7,7 @@ const port = parseInt(process.env.OPENSHIFT_NODEJS_PORT) || 8080;
 const host = process.env.OPENSHIFT_NODEJS_IP || 'localhost';
 
 console.log("Port number: " + port);
+console.log("Host address: " + host);
 
 const fs = require('fs');
 const WebSocket = require('ws');
